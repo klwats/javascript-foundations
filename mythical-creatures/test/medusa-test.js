@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var Medusa = require('../exercises/medusa');
+var Medusa = require();
 var Person = require('../exercises/person');
 var Statue = require('../exercises/statue');
 

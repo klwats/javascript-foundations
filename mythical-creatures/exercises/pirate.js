@@ -4,7 +4,7 @@ class Pirate {
         this.job = pirateJob || 'scallywag';
         this.cursed = false
         this.booty = 0
-        this.cursed = true
+        
     }
     robShip() {
         this.booty += 100
@@ -12,15 +12,25 @@ class Pirate {
             this.booty = 500
             this.cursed = true    
         }
-        if (this.cursed = true) {
-            console.log(this.cursed)
+        if (this.cursed === true) {
             return 'ARG! I\'ve been cursed!'
-        } else if (this.cursed = false) {
+        } else if (this.cursed === false) {
             return 'YAARRR!'
         }
-    
     }
-}
+    liftCurse() {
+        if (this.booty >= 300 && this.cursed === true) {
+            this.booty = (this.booty - 300)
+            this.cursed = false
+            return 'Your curse has been lifted!'
+        }
+        else {
+            return 'You don\'t need to lift a curse!'
+        }
+
+    }
+    }
+
 
 
 //after invoking robShip 5x, this.booty remains at 500 and this.cursed is true
